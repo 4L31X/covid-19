@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Inici
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-grid *ngIf = "mon">
+      <ion-row>
+        <ion-col>
+          <h1>Dades</h1>
+          <ion-item>
+            <ion-label>
+              <h1>Informació sobre el <br>covid-19 de casos, morts i <br>gent donada d'alta a tot al món : </h1><br>
+              <h2><b>Nous casos confirmats: </b>{{mon.Global.NewConfirmed}}</h2>
+              <h2><b>Total de casos: </b>{{mon.Global.TotalConfirmed}}</h2>
+              <h2><b>Noves morts: </b>{{mon.Global.NewDeaths}}</h2>
+              <h2><b>Total de morts: </b>{{mon.Global.TotalDeaths}}</h2>
+              <h2><b>Persones donades d'alta: </b>{{mon.Global.NewRecovered}}</h2>
+              <h2><b>Total donades d'alta: </b>{{mon.Global.TotalRecovered}}</h2>
+            </ion-label>
+            
+            
+          </ion-item>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+</ion-content>

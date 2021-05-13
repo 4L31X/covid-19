@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Casos Totals a Catalunya
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let dades of totals">
+      <ion-label class="ion-text-capitalize">
+        <h2>{{dades.data|date: 'MM/dd/yyyy'}}</h2>
+        <p>Nous casos: <b>{{dades.nous_casos_diaris_confirmats}}</b></p>
+        <p>Casos Totals: <b>{{dades.total_de_casos_confirmats}}</b></p>
+        <p>Defuncions diaries: <b>{{dades.defuncions_di_ries}}</b></p>
+        <p>Defuncions Totals: <b>{{dades.total_de_defuncions}}</b></p>
+        <p>Altes Diares: <b>{{dades.altes_di_ries}}</b></p>
+        <p>Total d'altes: <b>{{dades.total_d_altes}}</b></p>
+
+      </ion-label>
+      
+    </ion-item>
+  </ion-list>
+</ion-content>

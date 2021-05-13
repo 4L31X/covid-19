@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Comarques/Municipis
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-searchbar [(ngModel)]="cercaComarca" 
+      (ionInput)="filtrarComarca()" placeholder="Comarca">
+    </ion-searchbar>
+  </ion-item>
+  <ion-item>
+    <ion-searchbar [(ngModel)]="cercaMunicipi" 
+      (ionInput)="filtrarMunicipi()" placeholder="Municipis">
+    </ion-searchbar>
+  </ion-item>
+  <ion-item>
+    <ion-searchbar [(ngModel)]="cercaDistricte" 
+      (ionInput)="filtrarDistricte()" placeholder="Districte">
+    </ion-searchbar>
+  </ion-item>
+  <ion-item>
+    <ion-searchbar [(ngModel)]="cercaSexe" 
+      (ionInput)="filtrarSexe()" placeholder="Sexe: Home/Dona">
+    </ion-searchbar>
+  </ion-item>
+  <ion-item *ngFor="let mun of municipisFiltrats">
+    <ion-label>
+      <h2>Data: {{mun.data}}</h2>
+      <p>Comarca: {{mun.comarca}}</p>
+      <p>Municipi: {{mun.municipi}}</p>
+      <p>Districte: {{mun.districte}}</p>
+      <p>Sexe: {{mun.sexe}}</p>
+      <p>Resultat Test Covid: {{mun.resultat}}</p>
+      <p>Número de casos diaris: {{mun.numero}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
